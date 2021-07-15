@@ -1,2 +1,2 @@
-# Kotlin_Practice
+# Practice_Kotlin
 这是利用真实项目实操学习Kotlin的打卡记录
