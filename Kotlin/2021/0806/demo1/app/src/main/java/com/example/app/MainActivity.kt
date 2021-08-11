@@ -9,8 +9,19 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.app.entity.User
 import com.example.app.widget.CodeView
 import com.example.core.utils.CacheUtils
-import com.example.core.utils.Utils
+import com.example.core.utils.toast
 import com.example.lesson.LessonActivity
+
+//Tomorrow TO DO：1. 2.
+//1.
+//LessonAdapter.java
+//2.
+// 总结在Kotlin中声明八种基本数据类型数组的方式
+//private val testList = arrayOf(1, 2, 3)
+//        val test: FloatArray = floatArrayOf(1f, 2f)
+//        val test3: Array<Float> = arrayOf(1f, 2f)
+//        val test1: Array<String> = codeList
+//        val bo: BooleanArray = booleanArrayOf(true, false)
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -61,11 +72,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun verify(user: User): Boolean {
         if (user.username?.length ?: 0 < 4) {
-            Utils.toast("用户名不合法")
+            toast("用户名不合法")
             return false
         }
         if (user.password?.length ?: 0 < 4) {
-            Utils.toast("密码不合法")
+            toast("密码不合法")
             return false
         }
         return true

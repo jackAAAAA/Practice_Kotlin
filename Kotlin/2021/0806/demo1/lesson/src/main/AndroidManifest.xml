@@ -4,8 +4,9 @@
 
     <application>
         <activity
-            android:theme="@style/LessonTheme"
-            android:name="com.example.lesson.LessonActivity"/>
+            android:name=".LessonActivity"
+            android:theme="@style/LessonTheme"/>
     </application>
 
 </manifest>
+
