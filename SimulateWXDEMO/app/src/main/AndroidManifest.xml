@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.wxchatdemo">
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".kotlin.MyApplication"
+        android:icon="@drawable/wx_logo_icon"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.WxChatDemo"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".AppStart"/>
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+        <activity
+            android:name=".kotlin.AppStart"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Welcome" />
+        <activity android:name=".kotlin.Welcome" />
+        <activity android:name=".Register" />
+        <activity
+            android:name=".Loading"
+            android:theme="@style/MyDialogStyle" />
+        <activity android:name=".LoginUser" />
+        <activity android:name=".kotlin.LoginUser" />
+        <activity android:name=".LoginPhone" />
+        <activity android:name=".kotlin.LoginPhone" />
+        <activity android:name=".MainWeixin" />
+        <activity android:name=".Search" />
+        <activity
+            android:name="MainTopRightDialog"
+            android:theme="@style/MyDialogStyleTop" />
+    </application>
+</manifest>
